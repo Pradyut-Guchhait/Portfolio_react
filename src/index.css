@@ -95,7 +95,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background: #1b3096;
     background: radial-gradient(circle, rgba(27, 48, 150, 1) 0%, rgba(4, 4, 23, 1) 76%);
     z-index: -1;
@@ -110,18 +110,33 @@ body {
 /* Mobile-specific background fixes */
 @media (max-width: 768px) {
     .background-layer {
+        display: none; /* Hide the fixed background layer on mobile */
+    }
+    
+    /* Ensure body has the background for mobile */
+    body {
+        background: #1b3096 !important;
+        background: radial-gradient(circle, rgba(27, 48, 150, 1) 0%, rgba(4, 4, 23, 1) 76%) !important;
+        background-attachment: scroll !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        min-height: 100vh;
+    }
+    
+    /* Ensure the app wrapper covers only the content height */
+    .app-wrapper {
+        min-height: 100vh;
+        background: transparent;
+    }
+    
+    /* Prevent background from repeating at the end */
+    html {
+        background: #1b3096;
+        background: radial-gradient(circle, rgba(27, 48, 150, 1) 0%, rgba(4, 4, 23, 1) 76%);
         background-attachment: scroll;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        transform: translateZ(0);
-        -webkit-transform: translateZ(0);
-        backface-visibility: hidden;
-        -webkit-backface-visibility: hidden;
-    }
-    
-    /* Ensure body doesn't interfere */
-    body {
-        background: transparent !important;
     }
 }

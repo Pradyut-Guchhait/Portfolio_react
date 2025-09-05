@@ -1,10 +1,22 @@
 .footer {
     margin: 145px 70px 30px;
+    background: #1b3096;
+    background: radial-gradient(circle, rgba(27, 48, 150, 1) 0%, rgba(4, 4, 23, 1) 76%);
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 @media (max-width: 768px) {
     .footer {
         margin: 80px 20px 20px;
+        background: #1b3096;
+        background: radial-gradient(circle, rgba(27, 48, 150, 1) 0%, rgba(4, 4, 23, 1) 76%);
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 }
 
