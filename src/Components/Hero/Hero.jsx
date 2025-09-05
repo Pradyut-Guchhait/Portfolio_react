@@ -4,7 +4,7 @@ import profile_img from '../../assets/profile_img.png'
 
 const Hero = () => {
   return (
-    <div className='hero'>
+    <div id='home' className='hero'>
         <div className="profile-container">
             <img src={profile_img} alt="" />
             <div className="ripple-effect ripple-1"></div>

@@ -130,15 +130,15 @@
     50% { border-color: #DF8908 }
   }
   
-@media (max-width: 900px) {
-  .profile-container { margin-top: 18vh; }
+@media (max-width: 1100px) {
+  .profile-container { margin-top: 29vh; }
   .ripple-effect { width: 280px; height: 280px; }
   .hero h1 { width: 90%; font-size: 36px; }
   .hero p { width: 85%; font-size: 18px; line-height: 26px; }
-  .hero-actions { gap: 16px; font-size: 16px; margin-bottom: 30px; flex-wrap: wrap; }
+  .hero-actions { gap: 16px; font-size: 16px; margin-bottom: 0px; flex-wrap: wrap; }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   .profile-container img { width: 160px; }
   .ripple-effect { width: 220px; height: 220px; }
   .hero h1 { font-size: 28px; }

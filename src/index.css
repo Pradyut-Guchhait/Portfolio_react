@@ -1,12 +1,18 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
     overflow: scroll;
     overflow-x: hidden;
-    
+    scroll-behavior: smooth;
+}
+
+/* Ensure anchor scroll positions place section titles below the fixed navbar */
+#home, #about, #skills, #projects, #contact {
+    scroll-margin-top: 90px;
 }
 ::-webkit-scrollbar {
     width: 0;  /* Remove scrollbar space */
@@ -17,11 +23,15 @@ html {
     background: #FF0000;
 }
 body {
-    height: 100vh;
+    min-height: 100vh;
     background: #1b3096;
     background: radial-gradient(circle, rgba(27, 48, 150, 1) 0%, rgba(4, 4, 23, 1) 76%);
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: white;
     font-family: 'Outfit';
+}
+
+.no-scroll {
+    overflow: hidden !important;
 }

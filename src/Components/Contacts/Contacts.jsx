@@ -4,7 +4,7 @@ import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaGithub, FaLinkedin } from 'react
 
 function Contacts() {
   return (
-    <div className='contacts'>
+    <div id='contact' className='contacts'>
         <div className="contacts-title">
             <h1>Contact</h1>
         </div>
