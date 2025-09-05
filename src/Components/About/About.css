@@ -45,6 +45,14 @@
     font-weight: 500;
     line-height: 1.8;
 }
+
+@media (max-width: 1200px) {
+    .about-para {
+        margin-left: 10vh;
+        margin-right: 20vh;
+        font-size: 18px;
+    }
+}
 .aboutachievements{
     display: block;
     flex-shrink: 0;
@@ -62,6 +70,13 @@
     width: 60vh;
     margin-left: 0;
     margin-right: 0;
+}
+
+@media (max-width: 1200px) {
+    .achievement-card {
+        width: 50vh;
+        padding: 40px;
+    }
 }
 
 .achievement-card:hover{
@@ -120,13 +135,67 @@
 @media (max-width: 1100px) {
     .about { margin: 30px 30px; }
     .about-para { margin-left: 0; margin-right: 0; }
-    
 }
 
 @media (max-width: 900px) {
+    .about { margin: 20px 20px; }
     .about-title h1 { font-size: 33px; }
-    .about-sections { flex-direction: column; gap: 10px; }
-    .achievement-card { width: 100%;}
+    .about-sections { flex-direction: column; gap: 20px; }
+    .achievement-card { 
+        width: 100%;
+        padding: 30px;
+    }
+    .about-para {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 640px) {
+    .about { margin: 15px 15px; }
+    .about-title h1 { font-size: 28px; }
+    .achievement-card { 
+        padding: 20px;
+    }
+    .achievement-card h2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .achievement-content h3 {
+        font-size: 24px;
+    }
+    .achievement-content p {
+        font-size: 13px;
+    }
+    .about-para {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 480px) {
+    .about { margin: 10px 10px; }
+    .about-title h1 { font-size: 24px; }
+    .achievement-card { 
+        padding: 15px;
+    }
+    .achievement-card h2 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    .achievement-content h3 {
+        font-size: 20px;
+    }
+    .achievement-content p {
+        font-size: 12px;
+    }
+    .achievement-icon {
+        font-size: 28px;
+    }
+    .about-para {
+        font-size: 14px;
+        line-height: 1.4;
+    }
 }
 
 

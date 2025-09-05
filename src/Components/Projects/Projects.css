@@ -105,13 +105,70 @@
 @media (max-width: 900px) {
     .projects { margin: 40px 30px; }
     .projects-title h1 { font-size: 36px; }
+    .project-card {
+        padding: 30px 12px;
+    }
+    .project-title {
+        font-size: 20px;
+    }
+    .project-desc {
+        font-size: 13px;
+    }
 }
 
 @media (max-width: 640px) {
+    .projects { margin: 30px 20px; }
     .projects-title h1 {
-        font-size: 36px;
+        font-size: 32px;
     }
     .projects-grid {
         grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 10px;
+    }
+    .project-card {
+        padding: 25px 10px;
+    }
+    .project-title {
+        font-size: 18px;
+        margin: 2px 0 10px;
+    }
+    .project-desc {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+    .tech-chip {
+        font-size: 11px;
+        padding: 4px 8px;
+    }
+    .repo-link {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects { margin: 20px 15px; }
+    .projects-title h1 {
+        font-size: 28px;
+    }
+    .project-card {
+        padding: 20px 8px;
+    }
+    .project-title {
+        font-size: 16px;
+        margin: 2px 0 8px;
+    }
+    .project-desc {
+        font-size: 11px;
+        line-height: 1.4;
+    }
+    .tech-chip {
+        font-size: 10px;
+        padding: 3px 6px;
+    }
+    .repo-link {
+        padding: 5px 8px;
+        font-size: 11px;
     }
 }
