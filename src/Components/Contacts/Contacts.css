@@ -190,7 +190,7 @@
 }
 
 @media (max-width: 480px) {
-    .contacts { margin: 20px 15px; }
+    .contacts { margin-top: 10vh; }
     .contacts-title h1 { font-size: 28px; }
     .contacts-content { 
         padding: 15px;

@@ -215,7 +215,9 @@
 }
 
 @media (max-width: 480px) {
-    .about { margin: 10px 10px; }
+    .about { 
+        margin-top: 11vh;
+    }
     .about-title h1 { font-size: 24px; }
     .about-sections { 
         align-items: center;
@@ -245,7 +247,7 @@
     }
     .about-para {
         font-size: 14px;
-        line-height: 1.4;
+        line-height: 2.4;
         text-align: justify;
         text-align-last: center;
     }

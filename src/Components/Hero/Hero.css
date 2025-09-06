@@ -83,11 +83,16 @@
   /* ===== TEXT ===== */
   .hero h1{
     text-align:center;
-    width:70%;
+    width:100%;
+    max-width: 800px;
+    margin: 20px auto;
     font-size:60px;
     font-weight:600;
-    margin: 20px 0;
     line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .hero h1 span{
     background:linear-gradient(270deg,#DF8908 10%,#B415FF 100%);
@@ -214,9 +219,13 @@
   
   /* Large Desktop (1200px and up) */
   @media (min-width: 1200px) {
+    .hero h1 {
+      font-size: 70px;
+      max-width: 9l00px;
+    }
     .typewriter {
       font-size: 70px;
-      width: 60%;
+      width: 100%;
     }
     .hero p {
       font-size: 28px;
@@ -234,9 +243,13 @@
   
   /* Desktop (1024px to 1199px) */
   @media (max-width: 1199px) and (min-width: 1024px) {
+    .hero h1 {
+      font-size: 60px;
+      max-width: 800px;
+    }
     .typewriter {
-      font-size: 70px;
-      width: 70%;
+      font-size: 60px;
+      width: 100%;
     }
     .hero p {
       font-size: 25px;
@@ -265,9 +278,13 @@
       height: 350px;
     }
     
+    .hero h1 {
+      font-size: 30px;
+      max-width: 600px;
+    }
     .typewriter {
       font-size: 30px;
-      width: 80%;
+      width: 100%;
       line-height: 1.1;
     }
     
@@ -310,9 +327,13 @@
       height: 400px;
     }
     
+    .hero h1 {
+      font-size: 16px;
+      max-width: 500px;
+    }
     .typewriter {
       font-size: 16px;
-      width: 90%;
+      width: 100%;
       line-height: 1.1;
     }
     
@@ -351,12 +372,12 @@
   @media (max-width: 480px) {
     .hero {
       padding: 0 10px;
-      gap: 10px;
-      min-height: 85vh;
+      gap: 12px;
+      min-height: 90vh;
     }
     
     .profile-container {
-      margin-top: 10vh;
+      margin-top: 20vh;
     }
     
     .profile-container img {
@@ -369,9 +390,13 @@
       height: 320px;
     }
     
+    .hero h1 {
+      font-size: 30px;
+      max-width: 400px;
+    }
     .typewriter {
       font-size: 18px;
-      width: 95%;
+      width: 100%;
       line-height: 1.1;
     }
     
@@ -429,9 +454,13 @@
       height: 250px;
     }
     
+    .hero h1 {
+      font-size: 14px;
+      max-width: 350px;
+    }
     .typewriter {
       font-size: 14px;
-      width: 98%;
+      width: 100%;
       line-height: 1.1;
     }
     
@@ -488,8 +517,13 @@
       height: 200px;
     }
     
+    .hero h1 {
+      font-size: 12px;
+      max-width: 300px;
+    }
     .typewriter {
       font-size: 12px;
+      width: 100%;
       margin: 5px 0;
     }
     

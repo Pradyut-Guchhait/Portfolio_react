@@ -133,7 +133,7 @@
 }
 
 @media (max-width: 480px) {
-    .skill { margin: 20px 15px; }
+    .skill { margin-top: 10vh; }
     .skill-title h1 { font-size: 28px; }
     .skills-grid { 
         grid-template-columns: repeat(2, 1fr);

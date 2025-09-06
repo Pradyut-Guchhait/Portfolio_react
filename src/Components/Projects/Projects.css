@@ -157,7 +157,7 @@
 }
 
 @media (max-width: 480px) {
-    .projects { margin: 20px 15px; }
+    .projects { margin-top: 10vh; }
     .projects-title h1 {
         font-size: 28px;
     }
