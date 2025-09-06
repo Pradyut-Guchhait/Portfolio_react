@@ -5,6 +5,7 @@
     justify-content: center;
     gap: 40px;
     margin: 55px 70px;
+    background: transparent;
 }
 
 .skill-title h1 {
@@ -83,6 +84,10 @@
 
 .skill-item:hover span {
     color: #DF8908;
+}
+
+@media (max-width: 1200px) {
+    .skills-grid { grid-template-columns: repeat(4, 1fr); }
 }
 
 @media (max-width: 1100px) {

@@ -8,6 +8,12 @@
     background-repeat: no-repeat;
 }
 
+@media (max-width: 1200px) {
+    .footer {
+        margin: 120px 50px 30px;
+    }
+}
+
 @media (max-width: 768px) {
     .footer {
         margin: 80px 20px 20px;
@@ -30,7 +36,7 @@
     padding: 15px 20px;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
     border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
+    border-radius: 16px;
 }
 
 .footer-brand h3 {

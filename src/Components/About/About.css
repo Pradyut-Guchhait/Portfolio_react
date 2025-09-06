@@ -9,6 +9,7 @@
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 15px;
+    backdrop-filter: blur(10px);
 }
 .about-title h1 {
     background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
@@ -44,13 +45,28 @@
     font-size: 20px;
     font-weight: 500;
     line-height: 1.8;
+    max-width: 600px;
+    text-align: justify;
+    text-align-last: center;
 }
 
 @media (max-width: 1200px) {
     .about-para {
-        margin-left: 10vh;
-        margin-right: 20vh;
+        margin-left: 8vh;
+        margin-right: 15vh;
         font-size: 18px;
+        text-align: justify;
+        text-align-last: center;
+    }
+}
+
+@media (max-width: 1000px) {
+    .about-para {
+        margin-left: 5vh;
+        margin-right: 10vh;
+        font-size: 17px;
+        text-align: justify;
+        text-align-last: center;
     }
 }
 .aboutachievements{
@@ -140,22 +156,45 @@
 @media (max-width: 900px) {
     .about { margin: 20px 20px; }
     .about-title h1 { font-size: 33px; }
-    .about-sections { flex-direction: column; gap: 20px; }
+    .about-sections { 
+        flex-direction: column; 
+        gap: 20px;
+        align-items: center;
+    }
+    .aboutachievements {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
     .achievement-card { 
         width: 100%;
+        max-width: 400px;
         padding: 30px;
+        margin: 0 auto;
     }
     .about-para {
         font-size: 16px;
         line-height: 1.6;
+        text-align: justify;
+        text-align-last: center;
     }
 }
 
 @media (max-width: 640px) {
     .about { margin: 15px 15px; }
     .about-title h1 { font-size: 28px; }
+    .about-sections { 
+        align-items: center;
+    }
+    .aboutachievements {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
     .achievement-card { 
         padding: 20px;
+        margin: 0 auto;
+        max-width: 350px;
     }
     .achievement-card h2 {
         font-size: 20px;
@@ -170,14 +209,26 @@
     .about-para {
         font-size: 15px;
         line-height: 1.5;
+        text-align: justify;
+        text-align-last: center;
     }
 }
 
 @media (max-width: 480px) {
     .about { margin: 10px 10px; }
     .about-title h1 { font-size: 24px; }
+    .about-sections { 
+        align-items: center;
+    }
+    .aboutachievements {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
     .achievement-card { 
         padding: 15px;
+        margin: 0 auto;
+        max-width: 300px;
     }
     .achievement-card h2 {
         font-size: 18px;
@@ -195,6 +246,8 @@
     .about-para {
         font-size: 14px;
         line-height: 1.4;
+        text-align: justify;
+        text-align-last: center;
     }
 }
 

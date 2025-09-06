@@ -28,7 +28,7 @@ const Navbar = () => {
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <div className="nav-connect">Connect With Me</div>
+      <a href="#contact" className="nav-connect">Connect With Me</a>
 
       <div className={`mobile-menu ${menuOpen ? 'open' : ''}`} onClick={closeMenu}>
         <nav onClick={(e) => e.stopPropagation()}>

@@ -58,12 +58,25 @@ body {
     /* Prevent horizontal scroll */
     * {
         max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* Exclude ripple effects from max-width constraint */
+    .ripple-effect {
+        max-width: none !important;
+        max-height: none !important;
     }
     
     /* Improve touch targets */
     button, a, input, textarea {
         min-height: 44px;
         min-width: 44px;
+    }
+    
+    /* Better text rendering on mobile */
+    body {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
     }
 }
 
@@ -78,65 +91,25 @@ body {
         -ms-text-size-adjust: 100%;
     }
     
+    /* Better touch targets for very small screens */
+    button, a, input, textarea {
+        min-height: 48px;
+        min-width: 48px;
+    }
+}
+
+/* Additional responsive improvements */
+@media (max-width: 360px) {
+    body {
+        font-size: 12px;
+    }
+    
+    /* Prevent text from being too small */
+    h1, h2, h3 {
+        font-size: clamp(1.2rem, 4vw, 2rem);
+    }
 }
 
 .no-scroll {
     overflow: hidden !important;
-}
-
-/* App wrapper structure for better mobile background handling */
-.app-wrapper {
-    position: relative;
-    min-height: 100vh;
-}
-
-.background-layer {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: #1b3096;
-    background: radial-gradient(circle, rgba(27, 48, 150, 1) 0%, rgba(4, 4, 23, 1) 76%);
-    z-index: -1;
-    will-change: transform;
-}
-
-.content-layer {
-    position: relative;
-    z-index: 1;
-}
-
-/* Mobile-specific background fixes */
-@media (max-width: 768px) {
-    .background-layer {
-        display: none; /* Hide the fixed background layer on mobile */
-    }
-    
-    /* Ensure body has the background for mobile */
-    body {
-        background: #1b3096 !important;
-        background: radial-gradient(circle, rgba(27, 48, 150, 1) 0%, rgba(4, 4, 23, 1) 76%) !important;
-        background-attachment: scroll !important;
-        background-size: cover !important;
-        background-position: center !important;
-        background-repeat: no-repeat !important;
-        min-height: 100vh;
-    }
-    
-    /* Ensure the app wrapper covers only the content height */
-    .app-wrapper {
-        min-height: 100vh;
-        background: transparent;
-    }
-    
-    /* Prevent background from repeating at the end */
-    html {
-        background: #1b3096;
-        background: radial-gradient(circle, rgba(27, 48, 150, 1) 0%, rgba(4, 4, 23, 1) 76%);
-        background-attachment: scroll;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
 }
