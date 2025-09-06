@@ -41,11 +41,50 @@ body {
     background: radial-gradient(circle, rgba(27, 48, 150, 1) 0%, rgba(4, 4, 23, 1) 76%);
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
     color: white;
     font-family: 'Outfit';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* App wrapper styles */
+.app-wrapper {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.background-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1b3096;
+    background: radial-gradient(circle, rgba(27, 48, 150, 1) 0%, rgba(4, 4, 23, 1) 76%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    /* Prevent background glitching on mobile */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.content-layer {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    min-height: 100vh;
 }
 
 /* Mobile optimizations */
@@ -53,6 +92,11 @@ body {
     body {
         font-size: 14px;
         line-height: 1.5;
+        /* Fix mobile background glitching */
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
     }
     
     /* Prevent horizontal scroll */
@@ -78,23 +122,61 @@ body {
         -webkit-text-size-adjust: 100%;
         -ms-text-size-adjust: 100%;
     }
+    
+    /* Mobile background layer optimizations */
+    .background-layer {
+        /* Disable fixed attachment on mobile to prevent glitching */
+        background-attachment: scroll;
+        /* Force hardware acceleration */
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        /* Prevent background jumping */
+        will-change: transform;
+    }
+    
+    /* App wrapper mobile optimizations */
+    .app-wrapper {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
 }
 
 @media (max-width: 480px) {
     body {
         font-size: 13px;
+        /* Additional mobile background fixes */
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
     }
     
     /* Ensure proper viewport handling */
     html {
         -webkit-text-size-adjust: 100%;
         -ms-text-size-adjust: 100%;
+        /* Prevent zoom on input focus */
+        -webkit-text-size-adjust: none;
     }
     
     /* Better touch targets for very small screens */
     button, a, input, textarea {
         min-height: 48px;
         min-width: 48px;
+    }
+    
+    /* Additional mobile background layer optimizations */
+    .background-layer {
+        /* Force hardware acceleration on small screens */
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        /* Prevent background flickering */
+        -webkit-perspective: 1000;
+        perspective: 1000;
     }
 }
 

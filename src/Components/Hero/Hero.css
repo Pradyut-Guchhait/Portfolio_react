@@ -123,6 +123,19 @@
     text-decoration: none;
     color: inherit;
     display: inline-block;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    font-weight: 500;
+    /* Prevent text selection on mobile */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /* Better touch feedback */
+    -webkit-tap-highlight-color: transparent;
+    /* Smooth transitions */
+    will-change: transform, background-color, color;
   }
   .hero-resume{
     padding:12px 24px;
@@ -133,9 +146,41 @@
     transition:.3s ease;
     text-decoration: none;
     display: inline-block;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    font-weight: 500;
+    /* Prevent text selection on mobile */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /* Better touch feedback */
+    -webkit-tap-highlight-color: transparent;
+    /* Smooth transitions */
+    will-change: transform, background-color, color;
   }
-  .hero-connect:hover{ color:black; }
-  .hero-resume:hover{ color:white; background:black; }
+  .hero-connect:hover{ 
+    color:black; 
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(218, 124, 37, 0.3);
+  }
+  .hero-resume:hover{ 
+    color:white; 
+    background:black; 
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Active states for better mobile feedback */
+  .hero-connect:active {
+    transform: translateY(0);
+    transition: transform 0.1s ease;
+  }
+  .hero-resume:active {
+    transform: translateY(0);
+    transition: transform 0.1s ease;
+  }
   
   /* ===== TYPEWRITER ===== */
   .typewriter{
@@ -286,9 +331,19 @@
     
     .hero-connect,
     .hero-resume {
-      padding: 8px 16px;
-      width: 200px;
+      padding: 12px 20px;
+      width: 220px;
       text-align: center;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 30px;
+      /* Better mobile button styling */
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      /* Improved touch targets */
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
   
@@ -336,10 +391,19 @@
     
     .hero-connect,
     .hero-resume {
-      padding: 6px 12px;
-      width: 180px;
+      padding: 10px 16px;
+      width: 200px;
       text-align: center;
-      border-radius: 20px;
+      border-radius: 25px;
+      font-size: 14px;
+      font-weight: 600;
+      /* Better mobile button styling */
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      /* Improved touch targets */
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
   
@@ -387,10 +451,19 @@
     
     .hero-connect,
     .hero-resume {
-      padding: 5px 10px;
-      width: 160px;
+      padding: 8px 14px;
+      width: 180px;
       text-align: center;
-      border-radius: 15px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      /* Better mobile button styling */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+      /* Improved touch targets */
+      min-height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
   
