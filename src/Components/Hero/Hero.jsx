@@ -93,7 +93,7 @@ const Hero = () => {
           ) : (
             <>
               <span>{displayText.slice(0, 21)}</span>
-              {displayText.slice(21)}
+              <span className="white-text">{displayText.slice(21)}</span>
               {showCursor && <span className="cursor">|</span>}
             </>
           )}

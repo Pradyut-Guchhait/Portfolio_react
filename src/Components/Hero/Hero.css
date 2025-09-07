@@ -90,15 +90,22 @@
     font-weight:600;
     line-height: 1.2;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
   }
   .hero h1 span{
     background:linear-gradient(270deg,#DF8908 10%,#B415FF 100%);
     background-clip:text;
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
+  }
+  
+  .hero h1 .white-text{
+    color: white;
+    background: none;
+    -webkit-text-fill-color: white;
   }
   .hero p{
     width:50%;
@@ -200,14 +207,15 @@
   }
   
   .typewriter-line {
-    display: block;
-    margin-bottom: 5px;
+
   }
   
   .cursor {
     color: #DF8908;
     font-weight: bold;
     animation: blink 1s infinite;
+    display: inline;
+    margin-left: 2px;
   }
   
   @keyframes blink {
@@ -216,46 +224,6 @@
   }
   
   /* ===== RESPONSIVE DESIGN ===== */
-  
-  /* Large Desktop (1200px and up) */
-  @media (min-width: 1200px) {
-    .hero h1 {
-      font-size: 70px;
-      max-width: 9l00px;
-    }
-    .typewriter {
-      font-size: 70px;
-      width: 100%;
-    }
-    .hero p {
-      font-size: 28px;
-      width: 45%;
-    }
-    .profile-container img {
-      width: 220px;
-      height: 220px;
-    }
-    .ripple-effect {
-      width: 450px;
-      height: 450px;
-    }
-  }
-  
-  /* Desktop (1024px to 1199px) */
-  @media (max-width: 1199px) and (min-width: 1024px) {
-    .hero h1 {
-      font-size: 60px;
-      max-width: 800px;
-    }
-    .typewriter {
-      font-size: 60px;
-      width: 100%;
-    }
-    .hero p {
-      font-size: 25px;
-      width: 50%;
-    }
-  }
   
   /* Tablet (768px to 1023px) */
   @media (max-width: 1023px) and (min-width: 768px) {
