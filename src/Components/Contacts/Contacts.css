@@ -119,10 +119,16 @@
     text-decoration: none;
     border: 2px solid rgba(255, 255, 255, 0.35);
     border-color: transparent;
-    padding: 10px 16px;
-    border-radius: 12px;
+    padding: 12px 20px;
+    border-radius: 25px;
     cursor: pointer;
-    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    -webkit-tap-highlight-color: transparent;
 }
 
 .contact-form button:hover {
@@ -167,6 +173,26 @@
         padding: 20px;
         gap: 25px;
     }
+    .contact-list { 
+        gap: 8px; 
+    }
+    .contact-list li { 
+        align-items: flex-start; 
+        gap: 8px; 
+        line-height: 1.4; 
+    }
+    .contact-list li svg { 
+        font-size: 18px; 
+        margin-top: 2px; 
+        flex-shrink: 0; 
+    }
+    .contact-list a { 
+        font-size: 13px; 
+        word-break: break-word; 
+        overflow-wrap: anywhere; 
+        line-height: 1.4; 
+        display: inline-block; 
+    }
     .contact-form input,
     .contact-form textarea { 
         padding: 15px 10px;
@@ -184,8 +210,11 @@
         font-size: 20px;
     }
     .contact-form button {
-        padding: 8px 14px;
+        padding: 12px 20px;
         font-size: 14px;
+        border-radius: 25px;
+        min-height: 48px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     }
 }
 
@@ -196,13 +225,33 @@
         padding: 15px;
         gap: 20px;
     }
+    .contact-list { 
+        gap: 6px; 
+    }
+    .contact-list li { 
+        align-items: flex-start; 
+        gap: 6px; 
+        line-height: 1.35; 
+    }
+    .contact-list li svg { 
+        font-size: 16px; 
+        margin-top: 2px; 
+        flex-shrink: 0; 
+    }
+    .contact-list a { 
+        font-size: 15px; 
+        word-break: break-word; 
+        overflow-wrap: anywhere; 
+        line-height: 1.35; 
+        display: inline-block; 
+    }
     .contact-form input,
     .contact-form textarea { 
         padding: 12px 8px;
         font-size: 13px;
     }
     .contact-info h3 {
-        font-size: 16px;
+        font-size: 20px;
     }
     .contact-blurb {
         font-size: 12px;
@@ -210,14 +259,19 @@
     .contact-socials a {
         width: 38px;
         height: 38px;
-        font-size: 18px;
+        font-size: 30px;
     }
     .contact-form button {
-        padding: 6px 12px;
-        font-size: 13px;
+        padding: 10px 16px;
+        font-size: 14px;
+        border-radius: 25px;
+        min-height: 44px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     }
     .contact-list li {
-        font-size: 14px;
+        font-size: 15px;
+        column-gap: 19px;
+        margin-bottom: -10px;
     }
 }
 

@@ -19,17 +19,17 @@ function Projects() {
         title: 'BannerCraft: AI Banner Generator',
         tech: ['Python', 'OpenCV', 'TensorFlow', 'Flask'],
         description: 'AI-powered web app that detects products in images and generates promotional banners with high accuracy using a custom TensorFlow model.',
-        repo: 'https://github.com/your-username/ai-banner-generator' // replace with your actual repo link if available
+        repo: 'https://drive.google.com/file/d/1ndSFsk2dXwZtidW3TCZQ6T0hNQlTis4T/view' 
       }
       
   ]
 
   return (
-    <div id='projects' className='projects'>
+    <div id='projects' className='projects reveal'>
         <div className="projects-title">
             <h1>Projects</h1>
         </div>
-        <div className="projects-grid">
+        <div className="projects-grid stagger" data-repeat>
           {projects.map((project) => (
             <div className="project-card" key={project.title}>
               <div className="project-card-body">

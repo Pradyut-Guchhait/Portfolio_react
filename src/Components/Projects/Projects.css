@@ -87,9 +87,15 @@
     text-decoration: none;
     border: 2px solid rgba(255, 255, 255, 0.35);
     border-color: transparent;
-    padding: 8px 12px;
-    border-radius: 12px;
-    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    padding: 12px 20px;
+    border-radius: 25px;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    -webkit-tap-highlight-color: transparent;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .repo-link:hover {
@@ -151,8 +157,11 @@
         padding: 4px 8px;
     }
     .repo-link {
-        padding: 6px 10px;
-        font-size: 12px;
+        padding: 12px 18px;
+        font-size: 13px;
+        border-radius: 25px;
+        min-height: 48px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     }
 }
 
@@ -177,7 +186,10 @@
         padding: 3px 6px;
     }
     .repo-link {
-        padding: 5px 8px;
-        font-size: 11px;
+        padding: 10px 16px;
+        font-size: 12px;
+        border-radius: 25px;
+        min-height: 44px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     }
 }

@@ -50,7 +50,7 @@ function Contacts() {
   }
 
   return (
-    <div id='contact' className='contacts'>
+    <div id='contact' className='contacts reveal'>
         <div className="contacts-title">
             <h1>Contact</h1>
         </div>

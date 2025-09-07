@@ -70,7 +70,7 @@ const Hero = () => {
   }, [])
 
   return (
-    <div id='home' className='hero'>
+    <div id='home' className='hero reveal'>
         <div className="profile-container">
             <img src={profile_img} alt="" />
             <div className="ripple-effect ripple-1"></div>

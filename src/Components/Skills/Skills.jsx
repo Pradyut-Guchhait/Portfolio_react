@@ -5,7 +5,7 @@ import { FaC, FaCode } from 'react-icons/fa6'
 
 function Skills() {
     return (
-        <div id='skills' className='skill'>
+        <div id='skills' className='skill reveal'>
             <div className="skill-title">
                 <h1>Skills & Expertise</h1>
             </div>
