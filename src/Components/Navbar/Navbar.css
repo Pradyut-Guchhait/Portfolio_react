@@ -12,9 +12,6 @@
     backdrop-filter: blur(5px);
     padding: 20px;
     z-index: 1001;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    will-change: opacity, transform;
 }
 
 .nav-title {
@@ -71,9 +68,7 @@
 @media (max-width: 900px) {
     .navbar { 
         padding: 12px 16px; 
-        -webkit-backdrop-filter: none;
-        backdrop-filter: none;
-        background-color: rgba(1, 4, 39, 0.7);
+        backdrop-filter: blur(10px);
     }
     .nav-title { 
         font-size: 2.5vh; 
@@ -97,9 +92,6 @@
 @media (max-width: 480px) {
     .navbar { 
         padding: 10px 12px; 
-        -webkit-backdrop-filter: none;
-        backdrop-filter: none;
-        background-color: rgba(1, 4, 39, 0.75);
     }
     .nav-title { 
         font-size: 2.2vh; 
